@@ -1,0 +1,445 @@
+ /*-------------------------------------------- \
+|         general setting of the paga            |
+ \---------------------------------------------*/
+
+
+
+/* ------------variables of projecy------- */
+:root{
+--background-color: rgba(2, 1, 0, 0.7);
+--h1-color:orange;
+--text-decoration-color:rgb(223, 168, 18) ;
+--min-width: 30rem;
+--hover-effect:rgb(230, 160, 10);
+--color1:white;
+
+}
+
+/* ---------------remove default value of browser------ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ---------------scrollbar of the page------- */
+/* ::-webkit-scrollbar{
+   width: 1rem;
+}
+::-webkit-scrollbar-track{
+   background-color: var(--background-color);
+}
+::-webkit-scrollbar-button{
+   background-color:whitesmoke;
+   height: 0.5rem;
+}
+::-webkit-scrollbar-thumb{
+   background-color: var(--hover-effect);
+   border-radius: 1rem;
+   opacity: 0.4;
+} */
+
+
+ /* ---------------body sections------------ */
+
+body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/* --------------right part of the body--------- */
+.section{
+    min-height: 90vh;
+    max-height: fit-content;
+    min-width:40rem ;
+    background-color: var(--background-color);
+    margin: 5vh 2rem 2vh 5rem;
+    padding: 2rem;
+    color: var(--color1);
+}
+.witout-background .section{
+   background-color: transparent;
+}
+
+/* --------------first paragraph of the section------ */
+.section > p{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: xx-large;
+}
+/* ------span content of first paragraph in any section------ */
+.section >p >span{
+    font-weight: bold;
+    color: var(--h1-color);
+}
+
+/*-------------------------------------------- \
+|        navigation part of the page            |
+ \---------------------------------------------*/
+
+
+ header{
+    min-height: 100vh;
+    min-width: 20rem;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+ }
+ .navigation ul li{
+    margin-bottom:10vh;
+ }
+
+ .navigation a{
+    color: var(--color1);
+    padding: 2rem;
+ }
+ .navigation a:active{
+    color: var(--text-decoration-color);
+ }
+
+ /* --------cilcling around navigation icons------- */
+
+ .navigation a i{
+    border: 3px solid ;
+    padding: 1rem;
+    border-radius: 50%;
+ }
+
+ /* ----------hover efect on navigation----------- */
+ .navigation .homess, .navigation .productss, .navigation .formss, .navigation .contactss,.navigation .companyss{
+   color: var(--hover-effect)
+}
+
+ 
+ .navigation a:hover{
+    color: var(--hover-effect)
+ }
+
+ 
+
+/* ------button on the page-------- */
+button{
+    background-color: transparent;
+    width: 8rem;
+    height: 2rem;
+    box-shadow: 0 0 .7rem white;
+    color: whitesmoke;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+}
+.for-button button{display: none;}
+
+
+ /*-------------------------------------------- \
+|              home page section                 |
+ \---------------------------------------------*/
+
+ .home{
+    height: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;     
+ }
+ .home .container{
+    width: 80%;
+    font-size: x-large;
+    vertical-align:middle;
+ }
+ .home label::before{
+   content: ' \263C';
+   color: orange;
+ }
+
+
+
+ /*-------------------------------------------- \
+|              products section                   |
+ \---------------------------------------------*/
+
+
+/* --------------products columns--------------- */
+ .products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+ }
+
+ .products .container{
+    border: 1px solid;
+    padding: 4px;
+    
+ }
+ /* -----------columns in any product column------- */
+ .products .container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    gap: 0.5rem;
+ }
+ .products >div {
+   background-color: var(--background-color);
+ }
+
+ /* -------------icon size---------------------- */
+  .logo .fab{
+    font-size: 5rem;
+ }
+ .logo .fas{
+    font-size: 5rem;
+ }
+
+
+ /*-------------------------------------------- \
+|           our comopany section                 |
+ \---------------------------------------------*/
+
+ .company{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: 7%;
+ }
+ 
+ /* ----positioning gallery sotore into center of the hieght-------- */
+ .images{
+    align-self: center;
+ }
+ .images img{
+    height: 5rem;
+ }
+
+ /* ----------area to display hovered image--------- */
+ .images-display{
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+ }
+ /* ----how the image should look like in display section--- */
+ .images-display img{
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    align-self: center;
+ }
+
+ .images .madeit:hover img{
+    height: calc(200%);
+ }
+
+
+
+ /*-------------------------------------------- \
+|                form section                    |
+ \---------------------------------------------*/
+
+form p{ 
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-decoration-color);
+}
+
+/* ----form one -----*/
+ .form-one{
+    max-width: 70%;
+    max-height: fit-content;
+    padding: 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    border: 2px solid var(--text-decoration-color) ;
+    border-radius: 20px;
+ }
+
+ form input{
+   color: whitesmoke;
+    width: 80%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 3px solid var(--text-decoration-color);
+    margin:1rem auto 2rem auto;
+    padding-left: 1rem;
+    text-align: center;
+    font-size: large;
+    text-transform: capitalize
+ }
+
+ 
+ /*-------------------------------------------- \
+|                contact section                 |
+ \---------------------------------------------*/
+
+ .contact{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ /* ----------size of division--------- */
+.contact >div{
+   width: 45%;
+   min-width: 10rem;
+   margin: 3rem 2rem;
+}
+.contact label{
+   display: block;
+   margin: 2rem 0 0.4rem 0;
+   text-transform: capitalize;
+}
+.contact input{
+   min-width: 100%;
+   height: 2rem;
+   padding: 1rem;
+   outline: none;
+   border-radius: 0.5rem;
+   border: none;
+   background-color: transparent;
+   border-bottom: 2px solid white;
+   border-left: 2px solid white;
+}
+.contact textarea{
+   width: 100%;
+   height: 10rem;
+   padding: 1rem;
+   outline: none;
+   border-radius: 0.5rem;
+   background-color: transparent;
+   border-bottom: 2px solid white;
+   border-left: 2px solid white;
+}
+
+
+/*-------------------------------------------- \
+|     how it should look like on the tables     |
+ \---------------------------------------------*/
+
+@media screen and (max-width:65rem) {
+   body{
+      display: block;
+      font-size: medium;
+   }
+
+   header{
+      min-height: 10vh;
+      position: relative;
+      min-width: 80vw;
+      font-size: small;
+   }
+
+
+   .navigation ul{
+      width: 100vw;
+      display: flex;
+      justify-content:space-evenly;
+      align-items: center;
+   }
+
+   .navigation ul li{
+      margin-bottom:2vh;
+   }
+  
+   .navigation a{
+      color: var(--color1);
+      padding: 0;
+   }
+   .navigation a i{
+      padding: 0.3rem;
+      margin-left: 1rem;
+   }
+   .fab{
+      font-size: 1rem;
+   }
+section{
+   width: 100vw;
+}
+
+   .section{
+      width: 90vw;
+      margin: 5vh auto 1rem auto;
+   }
+
+}
+
+
+/*---------------------------------------======----- \
+|     how it should look like on the smart phone     |
+ \--------------------------------------------------*/
+
+ @media screen and (max-width:40rem){
+   body{
+      font-size: small;
+   }
+   header{
+      min-width: 60vw;
+      width: 50vw;
+       height: fit-content;
+       margin: 1rem auto;
+       
+   }
+   .section{
+      min-width: 30rem;
+      width: 100vw;
+      margin: 4rem 0 1rem 0;
+   }
+
+   .navigation ul{
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0.4rem auto;
+   }
+   
+   /* --------product section-------------- */
+   .products{
+      display: block;
+   }
+   .products >div{
+      margin-bottom: 2rem;
+   }
+   /* ---------contact section------------- */
+   .contact{
+      display: block;
+   }
+   .contact >div{
+      margin: 1rem auto;
+
+   }
+   /* ----------home section------------ */
+   .home .container{
+      font-size: medium;
+      height: 100%;
+   }
+
+   .for-button button{
+      display: block;
+      margin: 1rem auto ;
+      font-size:xx-large;
+      height: fit-content;
+      width: 6rem;
+      background-color: var(--background-color);
+      
+   }
+   .for-button button:hover header{
+    display: flex;  
+   }
+   .for-button header ul {
+      display: flex;
+   }
+   
+
+ }
